@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Problem2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] num = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter number " + (i+1) + ": ");
+            num[i] = sc.nextInt();
+        }
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] > 0) {
+                if (num[i] % 2 == 0) {
+                    System.out.println("The number " + num[i] + " is positive and even.");
+                } else {
+                    System.out.println("The number " + num[i] + " is positive and odd.");
+                }
+            } else if (num[i] < 0) {
+                System.out.println("The number " + num[i] + " is a negative number.");
+            } else {
+                System.out.println("The number is a zero.");
+            }
+        }
+        if (num[0] > num[num.length - 1]) {
+            System.out.println("The first entered number is greater than the last.");
+        } else if (num[num.length - 1] > num[0]) {
+            System.out.println("The last entered number is greater than the first.");
+        } else {
+            System.out.println("The first and last entered numbers are equal.");
+        }
+    }
+}
